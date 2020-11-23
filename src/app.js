@@ -12,19 +12,9 @@ import './firebase/firebase';
 
 const store = configureStore();
 
-store.dispatch(addExpense({description: 'Water bill', amount: 100}));
-store.dispatch(addExpense({description: 'Gas bill',createdAt:1000}));
-store.dispatch(addExpense({description: 'Rent', amount: 10500}));
-
-store.dispatch(setTextFilter('water'));
 
 
 
-const state = store.getState();
-const visibleExpenses = getVisibleExpenses(state.expense , state.filters);
-
-
-console.log(visibleExpenses);
 
 
 const jsx = (
