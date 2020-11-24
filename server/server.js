@@ -5,6 +5,8 @@ const express = require('express');
 const app = express();
 const publicPath = path.join(__dirname, '..', 'public');
 
+const port = process.env.port || 3000;
+
 app.use(express.static(publicPath));
 
 app.get('*', (req , res)=>{
@@ -12,6 +14,6 @@ app.get('*', (req , res)=>{
 });
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('Server is Up!');
 });
